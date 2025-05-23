@@ -1,7 +1,8 @@
 # ChainGuardian – Modular Security Snaps for MetaMask
 
 ## Overview
-ChainGuardian is an experimental security framework built with **MetaMask Flask** and **Snaps**. It allows users and developers to intercept, analyze and assess any blockchain transactions that a user is about to sign via MetaMask (particularly **EVM-compatible blockchain transactions** - before the wallet processes the signature), using plugin-like modules called **Snaps**. These Snaps can scan for threats, simulate contracts, or validate cross-chain interactions in real-time.
+ChainGuardian is an experimental security framework built with **MetaMask Flask** and **Snaps**. It allows users and developers to intercept, analyze and assess any blockchain transactions that a user is about to sign via MetaMask (particularly **EVM-compatible blockchain transactions** - before the wallet processes the signature), using plugin-like modules called **Snaps**. These Snaps can scan for threats, simulate contracts, or validate cross-chain interactions in real-time.  
+
 ChainGuardian acts like a **security middleware** between MetaMask and the blockchain, powered by Snaps, which are plugin-like scripts running in a secure sandboxed environment inside MetaMask Flask.
 It allows:
 -   **Custom threat detection** on transactions.
@@ -28,5 +29,5 @@ If you're building a dApp, you can integrate ChainGuardian to:
 
 
 ## Core Technologies
-**MetaMask Flask:** Experimental MetaMask wallet that enables Snap installation
+**MetaMask Flask:** Experimental MetaMask wallet that enables Snap installation.  
 **MetaMask Snaps:** Isolated JavaScript environments for extending wallet functionality
