@@ -10,6 +10,23 @@ It allows:
 -   **Cross-chain validation** (e.g., warning users when interacting with unverified bridges).
 -   **Plugin-based modularity**, so anyone can write their own security Snap.
 
+## Architecture
+ChainGuardian is architected with a modular, plug-and-play design that allows seamless integration of various Snaps, each focused on specific security tasks. The system operates in three main layers: 
+1. Intercept Layer:
+    Hooks into transaction requests made via MetaMask Flask, allowing ChainGuardian to intercept and parse them before they reach the signing stage. 
+2. Analysis Layer:
+    Executes a configurable chain of Snap modules, each performing a specific task such as: 
+    -   Threat pattern matching
+    -   ABI and bytecode inspection
+    -   Address reputation checks (using threat intelligence feeds)
+    -   Contract simulation with forked RPC environments
+3. Feedback Layer:
+    Displays the results of the analysis back to the user via MetaMask's UI, offering:
+    -   Risk scores
+    -   Human-readable diagnostics
+    -   Suggested next actions (e.g., reject, proceed with caution)
+This architecture ensures extensibility and composability—developers can write and publish new Snaps tailored for different security scenarios. 
+
 ## Developer Use-Case
 When MetaMask Snap Store goes live, ChainGuardian can:
 -   Be installed by users from a trusted registry.
