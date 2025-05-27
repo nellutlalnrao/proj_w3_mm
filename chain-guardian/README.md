@@ -88,3 +88,31 @@ ChainGuardian is designed with extensibility in mind. Planned future integration
 ## Core Technologies
 **MetaMask Flask:** Experimental MetaMask wallet that enables Snap installation.  
 **MetaMask Snaps:** Isolated JavaScript environments for extending wallet functionality
+
+## Get Started
+
+### Prerequisites
+
+Before you begin, ensure you have:
+-   Install **MetaMask Flask**: https://metamask.io/flask
+-   Setup **Node.js** (v16 or later) and npm or Yarn
+-   A **Chromium-based browser** (Chrome/Brave) to run MetaMask Flask
+
+### Create Project
+
+-   Create Snap Project using command:
+    ```yarn create @metamask/snap chain-guardian```
+
+-   From the root of the created project, install project dependencies:
+    ```yarn install```
+    ```yarn run allow-scripts auto```
+
+-   Start the Development Server:
+    ```yarn start```
+
+Now serving the Snap at http://localhost:8080 and its front-end dapp at http://localhost:8000.
+
+### Connect to the Snap 
+
+On the front-end dapp, select the ***Connect*** button and the MetaMask Flask extension pops up and requires you to approve the Snap's permissions. 
+Once connected, select the ***Send message*** button to display a custom message within a confirmation dialog in MetaMask Flask.
